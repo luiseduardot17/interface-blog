@@ -64,6 +64,15 @@
     color: #605C59;
 }
 
+.regular-body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #434343;
+}
+
 .form-control{
     width: 430px;
     height: 58px;
@@ -74,4 +83,15 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
+}
+
+.react-link {
+    color: #333333;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 425px) {
+    .form-control{
+        width: 100%;
+    }
 }
