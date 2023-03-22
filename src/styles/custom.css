@@ -90,6 +90,24 @@
     text-decoration: none;
 }
 
+/* pagina do post */
+.bold-700-title{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 57.82px;
+    color: #000000;
+}
+
+.body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
 @media screen and (max-width: 425px) {
     .form-control{
         width: 100%;
