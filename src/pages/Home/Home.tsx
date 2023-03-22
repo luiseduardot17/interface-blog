@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Card from '../../components/Card/Card'
 import Input from '../../components/Input/Input'
 import Navbar from '../../components/Navbar/Navbar'
 import IPost from '../../interfaces/IPost'
@@ -23,15 +25,14 @@ const Home = () => {
       <div className="container-sm d-flex justify-content-center">
         <Input />
       </div>
-      <section>
-        {posts.map(post => {
-          return (
-            <div key={post.id}>
-              <p>{post.title}</p>
-              <p>{post.body}</p>
-            </div>
-          )
-        })}
+      <section className='container-sm pt-5 pb-5'>
+        <div className="row row-cols-1 row-cols-md-2 g-5 justify-content-around">
+          {posts.map(post => {
+            return (
+              <Link to={`/post/${post.id}`} className="react-link"><Card key={post.id} title={post.title} body={post.body.slice(0, 100)} /></Link>
+            )
+          })}
+        </div>
       </section>
     </div>
   )
