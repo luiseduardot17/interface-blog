@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary p-5">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary pt-5 pb-5">
             <div className="container-fluid">
                 <a className="navbar-brand bold-700" href="#">Food Ninja</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
