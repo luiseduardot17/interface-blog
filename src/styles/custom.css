@@ -4,7 +4,7 @@
 :root{
     --primary: #0D6EFD;
     --secondary: #6C757D;
-    --tertiary: #72F2EB;
+    --tertiary: #2E86C1;
     --success: #198754;
     --info: #0DCAF0;
     --warning: #FFC107;
@@ -12,7 +12,7 @@
 }
 
 .bg-primary, .btn-primary{
-    background-color: var(--primary) !important;
+    background-color: var(--tertiary) !important;
 }
 .bg-secondary, .btn-secondary{
     background-color: var(--secondary) !important;
@@ -39,7 +39,7 @@
     font-size: 18px;
 }
 .nav-link:hover{
-    color: var(--warning) !important ; 
+    color: var(--tertiary) !important ;
 }
 
 .bold-700{
