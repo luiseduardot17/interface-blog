@@ -37,7 +37,7 @@ const Home = () => {
         <div className="row row-cols-1 row-cols-md-2 g-5 justify-content-around">
           {filteredPosts.map(post => {
             return (
-              <Link to={`/post/${post.id}`} className="react-link"><Card key={post.id} title={post.title} body={post.body.slice(0, 100)} /></Link>
+              <Link to={`/post/${post.id}`} className="react-link" key={post.id}><Card title={post.title} body={post.body.slice(0, 100)} id={post.id} /></Link>
             )
           })}
         </div>
