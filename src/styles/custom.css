@@ -108,6 +108,19 @@
     text-align: left;
 }
 
+.h6 {
+    height: 22px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;
+    color: #3E3E3E;
+}
+
+.pagination {
+    --bs-pagination-active-bg: #000638;
+}
+
 @media screen and (max-width: 425px) {
     .form-control{
         width: 100%;
