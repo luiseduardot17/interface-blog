@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../../components/Card/Card'
+import Footer from '../../components/Footer/Footer'
 import Input from '../../components/Input/Input'
 import Navbar from '../../components/Navbar/Navbar'
 import Pagination from '../../components/Pagination/Pagination'
@@ -32,6 +33,7 @@ const Home = () => {
 
 
   return (
+    <>
     <div className="container-sm">
       <Navbar />
       <div className="container-sm text-center p-5">
@@ -59,6 +61,11 @@ const Home = () => {
         onPageChange={handlePageChange}
       />
     </div>
+    
+    <div className="container-fluid">
+    <Footer/>
+    </div>
+    </>
   )
 }
 

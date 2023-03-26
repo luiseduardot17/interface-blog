@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import IUsers from '../../interfaces/IUsers'
 import http from '../../service/api'
@@ -56,6 +57,7 @@ const People = () => {
                     </div>
                 </form>
             </div>
+            <Footer/>
         </div>
     )
 }

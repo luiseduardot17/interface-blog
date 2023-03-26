@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import http from "../../service/api"
 import { useParams } from "react-router-dom"
 import IComments from "../../interfaces/IComments"
+import Footer from "../../components/Footer/Footer"
 
 type URL = string;
 const IMAGES_PATH: URL = '/src/assets/images/'
@@ -84,6 +85,7 @@ const PagePost = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   )
 }
