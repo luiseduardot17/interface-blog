@@ -3,24 +3,32 @@ import { Link } from 'react-router-dom'
 import Card from '../../components/Card/Card'
 import Input from '../../components/Input/Input'
 import Navbar from '../../components/Navbar/Navbar'
+import Pagination from '../../components/Pagination/Pagination'
 import IPost from '../../interfaces/IPost'
 import http from '../../service/api'
 
 const Home = () => {
-
   const [posts, setPosts] = useState<IPost[]>([])
   const [searchText, setSearchText] = useState("")
 
+  const [currentPage, setCurrentPage] = useState<number>(1)
+  const postsPerPage = 4;
+
   useEffect(() => {
     http.get<IPost[]>('posts')
-      .then(resposta => setPosts(resposta.data.slice(0, 2)))
+      .then(resposta => setPosts(resposta.data))
   }, [])
+
+  function handlePageChange(pageNumber: number) {
+    setCurrentPage(pageNumber);
+  }
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(event.target.value);
   };
 
   const filteredPosts = posts.filter(post => post.title.includes(searchText));
+  const filteredPostsPerPage = filteredPosts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage);
 
 
   return (
@@ -35,13 +43,21 @@ const Home = () => {
       </div>
       <section className='container-sm pt-5 pb-5'>
         <div className="row row-cols-1 row-cols-md-2 g-5 justify-content-around">
-          {filteredPosts.map(post => {
+          {filteredPostsPerPage.map(post => {
             return (
-              <Link to={`/post/${post.id}`} className="react-link" key={post.id}><Card title={post.title} body={post.body.slice(0, 100)} id={post.id} /></Link>
+              <Link to={`/post/${post.id}`} className="react-link" key={post.id}>
+                <Card title={post.title} body={post.body.slice(0, 100)} id={post.id} />
+              </Link>
             )
           })}
         </div>
       </section>
+
+      <Pagination
+        totalPages={Math.ceil(filteredPosts.length / postsPerPage)}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
     </div>
   )
 }
