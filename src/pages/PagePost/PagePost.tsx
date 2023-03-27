@@ -50,7 +50,7 @@ const PagePost = () => {
           <div className="row row-cols-1 row-cols-md-1 g-2 justify-content-around">
             {comentarios?.map(item => {
               return (
-                <div className="col h-100">
+                <div className="col h-100" key={item.id}>
                   <div className="card">
                     <div className="card-body">
                       <h3><i className="bi bi-person-circle" style={{ color: "#F39C12" }}></i> {item.name}</h3>
