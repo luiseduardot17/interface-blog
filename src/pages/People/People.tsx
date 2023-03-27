@@ -19,8 +19,8 @@ const People = () => {
         <div className="container-sm">
             <Navbar />
             <div className="container-sm text-center p-5">
-                <h2 className="light-300">Conheça nossos colaboradores</h2>
-                <p className="roboto">Usuários, Membros e Autores</p>
+                <h2 className="light-300">Meet our collaborators</h2>
+                <p className="roboto">Users, Members and Authors</p>
             </div>
             <section className='container-sm pt-5 pb-5'>
                 <div className="row row-cols-1 row-cols-md-5 g-5 justify-content-around">
@@ -40,13 +40,13 @@ const People = () => {
                 </div>
             </section>
             <div className="container-sm text-center p-5">
-                <h2 className="light-300">Faça parte você também!</h2>
-                <p className="roboto">Seja você um leitor ou um autor</p>
+                <h2 className="light-300">Be part of you too!</h2>
+                <p className="roboto">Whether you are a reader or an author</p>
             </div>
             <div className="d-grid gap-2 col-4 mx-auto p-3">
                 <form>
                     <div className="form-group">
-                        <label htmlFor="name">Nome:</label>
+                        <label htmlFor="name">Name:</label>
                         <input type="text" className="form-control" id="name" />
                     </div>
                     <div className="form-group">
@@ -54,7 +54,7 @@ const People = () => {
                         <input type="email" className="form-control" id="email" />
                     </div>
                     <div className="text-center p-3">
-                        <button type="submit" className="btn btn-primary w-50">Cadastrar</button>
+                        <button type="submit" className="btn btn-primary w-50">Subscribe</button>
                     </div>
                 </form>
             </div>

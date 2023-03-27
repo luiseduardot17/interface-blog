@@ -29,23 +29,23 @@ const PagePeople = () => {
               <img src={person} className="img-fluid" alt="icone de perfil" />
               <h3 className='bold-700'>{users?.name}</h3>
               <p>Username: {users?.username}</p>
-              <p>E-mail: {users?.email}</p>
-              <p>Telefone: {users?.phone}</p>
-              <p>WebSite: {users?.website}</p>
+              <p>Email: {users?.email}</p>
+              <p>Phone: {users?.phone}</p>
+              <p>Website: {users?.website}</p>
             </div>
             <div className="card-body regular-body">
-              <h6 className='h6'>Endereço:</h6>
-              <p>CEP: {users?.address.zipcode}</p>
-              <p>Cidade: {users?.address.city}</p>
-              <p>Rua: {users?.address.street}</p>
-              <p>Apartamento: {users?.address.suite}</p>
-              <h6 className='h6'>Coordenadas geográficas:</h6>
-              <p>Latitude: {users?.address.geo.lat}</p>
-              <p>Longitude: {users?.address.geo.lng}</p>
+              <h6 className='h6'>Address:</h6>
+              <p>Zipcode: {users?.address.zipcode}</p>
+              <p>City: {users?.address.city}</p>
+              <p>Street: {users?.address.street}</p>
+              <p>Suite: {users?.address.suite}</p>
+              <h6 className='h6'>Geo:</h6>
+              <p>Lat: {users?.address.geo.lat}</p>
+              <p>Lng: {users?.address.geo.lng}</p>
               <div className="card-footer regular-body rounded-bottom-5">
-                <h6 className='h6'>Empresa</h6>
-                <p>Nome: {users?.company.name}</p>
-                <p>Bordão: {users?.company.catchPhrase}</p>
+                <h6 className='h6'>Company</h6>
+                <p>Name: {users?.company.name}</p>
+                <p>Catch Phrase: {users?.company.catchPhrase}</p>
                 <p>Bs: {users?.company.bs}</p>
               </div>
             </div>

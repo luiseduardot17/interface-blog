@@ -15,7 +15,7 @@ const Card = ({title, body, id}: DadosCard) => {
                 <img src={IMAGES_PATH + `${id}.jpg`} className="img-fluid" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title bold-700">{title}</h5>
-                    <p className="card-text regular-body">{body}... <strong>Leia mais!</strong></p>
+                    <p className="card-text regular-body">{body}... <strong>Read more!</strong></p>
                 </div>
             </div>
         </div>

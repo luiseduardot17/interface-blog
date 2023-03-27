@@ -46,7 +46,7 @@ const PagePost = () => {
       </div>
       <section className='container-sm pt-5 pb-5'>
         <div>
-          <h3>Comentários:</h3>
+          <h3>Comments:</h3>
           <div className="row row-cols-1 row-cols-md-1 g-2 justify-content-around">
             {comentarios?.map(item => {
               return (
@@ -56,7 +56,7 @@ const PagePost = () => {
                       <h3><i className="bi bi-person-circle" style={{ color: "#F39C12" }}></i> {item.name}</h3>
                       <h6>{item.email}</h6>
                       <p>{item.body}</p>
-                      <a className="nav-link" href="#">Responder</a>
+                      <a className="nav-link" href="#">To respond</a>
                     </div>
                   </div>
                 </div>
@@ -64,11 +64,11 @@ const PagePost = () => {
             })}
           </div>
           <div className="d-grid gap-2 col-4 mx-auto p-3">
-            <button className="btn btn-primary" type="button" onClick={handleAddComment}>Deixe um comentário</button>
+            <button className="btn btn-primary" type="button" onClick={handleAddComment}>Leave a comment</button>
             {showForm && (
               <form>
                 <div className="form-group">
-                  <label htmlFor="name">Nome:</label>
+                  <label htmlFor="name">Name:</label>
                   <input type="text" className="form-control" id="name" />
                 </div>
                 <div className="form-group">
@@ -76,10 +76,10 @@ const PagePost = () => {
                   <input type="email" className="form-control" id="email" />
                 </div>
                 <div className="form-group pb-3">
-                  <label htmlFor="comment">Comentário:</label>
+                  <label htmlFor="comment">Commentary:</label>
                   <textarea className="form-control" id="comment"></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary w-50">Enviar</button>
+                <button type="submit" className="btn btn-primary w-50">Send</button>
               </form>
             )}
           </div>
