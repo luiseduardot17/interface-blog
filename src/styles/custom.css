@@ -39,7 +39,7 @@
     font-size: 18px;
 }
 .nav-link:hover{
-    color: var(--tertiary) !important ;
+    color: var(--warning) !important ;
 }
 
 .bold-700{
@@ -119,6 +119,7 @@
 
 .pagination {
     --bs-pagination-active-bg: #000638;
+    --bs-pagination-active-border-color: #000638;
 }
 
 @media screen and (max-width: 425px) {
