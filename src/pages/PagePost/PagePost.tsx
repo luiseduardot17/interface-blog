@@ -85,7 +85,7 @@ const PagePost = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
