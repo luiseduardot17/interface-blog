@@ -26,7 +26,7 @@ const PagePost = () => {
       http.get<IPost>(`posts/${parametro.id}/`)
         .then(resposta => setBody(resposta.data.body)
         )
-      http.get<IComments[]>(`https://jsonplaceholder.typicode.com/posts/${parametro.id}/comments`)
+      http.get<IComments[]>(`posts/${parametro.id}/comments`)
         .then(resposta => setComentarios(resposta.data)
         )
     }
@@ -46,14 +46,14 @@ const PagePost = () => {
       </div>
       <section className='container-sm pt-5 pb-5'>
         <div>
-          <h3>Opinião dos leitores</h3>
+          <h3>Comentários:</h3>
           <div className="row row-cols-1 row-cols-md-1 g-2 justify-content-around">
             {comentarios?.map(item => {
               return (
                 <div className="col h-100">
                   <div className="card">
                     <div className="card-body">
-                      <h3><i className="bi bi-person-circle" style={{ color: "#2E86C1" }}></i> {item.name}</h3>
+                      <h3><i className="bi bi-person-circle" style={{ color: "#F39C12" }}></i> {item.name}</h3>
                       <h6>{item.email}</h6>
                       <p>{item.body}</p>
                       <a className="nav-link" href="#">Responder</a>
@@ -64,7 +64,7 @@ const PagePost = () => {
             })}
           </div>
           <div className="d-grid gap-2 col-4 mx-auto p-3">
-            <button className="btn btn-primary" type="button" onClick={handleAddComment}>Fazer um comentário</button>
+            <button className="btn btn-primary" type="button" onClick={handleAddComment}>Deixe um comentário</button>
             {showForm && (
               <form>
                 <div className="form-group">
