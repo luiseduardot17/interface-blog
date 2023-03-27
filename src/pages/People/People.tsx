@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import IUsers from '../../interfaces/IUsers'
 import http from '../../service/api'
+import person from '../../assets/svg/person.svg'
 
 const People = () => {
 
@@ -26,8 +27,8 @@ const People = () => {
                     {users.map(user => {
                         return (
                             <div className="col h-100 text-center" key={user.id}>
-                                <Link to={`/user/${user.id}`} className="react-link">
-                                    <i className="bi bi-person-circle" style={{ fontSize: 10 + "rem", color: "#F39C12" }}></i>
+                                <Link to={`/users/${user.id}`} className="react-link">
+                                    <img src={person} className="img-fluid" alt="icone de perfil"/>
                                     <div className="card-body">
                                         <h5 className="card-title bold-700">{user.username}</h5>
                                         <p className="card-text regular-body">{user.website}</p>
