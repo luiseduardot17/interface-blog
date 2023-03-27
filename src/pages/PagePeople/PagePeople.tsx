@@ -1,20 +1,25 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import IUsers from '../../interfaces/IUsers'
 import http from '../../service/api'
 import person from '../../assets/svg/person.svg'
+import IPost from '../../interfaces/IPost'
 
 const PagePeople = () => {
   const parametro = useParams()
 
   const [users, setUsers] = useState<IUsers | undefined>(undefined);
+  const [postsPerUser, setPostsPerUser] = useState<IPost[]>()
 
   useEffect(() => {
     if (parametro.id) {
       http.get<IUsers>(`users/${parametro.id}`)
         .then(resposta => setUsers(resposta.data)
+        )
+      http.get<IPost[]>(`users/${parametro.id}/posts`)
+        .then(resposta => setPostsPerUser(resposta.data)
         )
     }
   }, [parametro])
@@ -51,6 +56,24 @@ const PagePeople = () => {
             </div>
           </div>
         </div>
+        <section className='container-sm p-0 pt-5'>
+          <h3 className='body'>Posts created:</h3>
+          <div className="row row-cols-1 row-cols-md-1 g-2 justify-content-around">
+            {postsPerUser?.map(item => {
+              return (
+                <div className="col h-100" key={item.id}>
+                  <Link to={`/post/${item.id}`}>
+                    <div className="card">
+                      <div className="card-body">
+                        <h3 className='bold-700'>{item.title}</h3>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              )
+            })}
+          </div>
+        </section>
       </div>
       <Footer />
     </div>
