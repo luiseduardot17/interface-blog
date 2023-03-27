@@ -43,7 +43,7 @@ const People = () => {
                 <h2 className="light-300">Be part of you too!</h2>
                 <p className="roboto">Whether you are a reader or an author</p>
             </div>
-            <div className="d-grid gap-2 col-4 mx-auto p-3">
+            <div className="d-grid gap-2 col-4 mx-auto p-3 justify-content-md-center">
                 <form>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
