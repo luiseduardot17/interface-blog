@@ -55,7 +55,7 @@ const Home = () => {
               const authorName = author ? author.name : 'Anonymous author';
               return (
                 <Link to={`/post/${post.id}`} className="react-link" key={post.id}>
-                  <Card title={post.title} body={post.body.slice(0, 100)} id={post.id} authorName={authorName} link={post.userId} />
+                  <Card title={post.title} body={post.body.slice(0, 100)} id={post.id} authorName={authorName} />
                 </Link>
               )
             })}
