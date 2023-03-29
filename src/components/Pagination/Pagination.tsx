@@ -43,7 +43,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }: PaginationProps) 
                 );
                 if (start > 2) {
                     pages.push(
-                        <li className="page-item disabled" key="...">
+                        <li className="page-item disabled" key="start">
                             <span className="page-link">...</span>
                         </li>
                     );
@@ -61,7 +61,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }: PaginationProps) 
             if (end < totalPages) {
                 if (end < totalPages - 1) {
                     pages.push(
-                        <li className="page-item disabled" key="...">
+                        <li className="page-item disabled" key="end">
                             <span className="page-link">...</span>
                         </li>
                     );
