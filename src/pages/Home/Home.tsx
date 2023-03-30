@@ -25,6 +25,13 @@ const Home = () => {
       )
   }, [])
 
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo(0, 150);
+    };
+    setTimeout(scrollToTop, 100);
+  }, [currentPage]);
+
   function handlePageChange(pageNumber: number) {
     setCurrentPage(pageNumber);
   }
