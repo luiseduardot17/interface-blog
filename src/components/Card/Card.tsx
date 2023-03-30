@@ -6,7 +6,7 @@ interface DadosCard {
     authorName: string
 }
 type URL = string;
-const IMAGES_PATH: URL = '/src/assets/images/'
+const IMAGES_PATH: URL = '/images/'
 
 const Card = ({title, body, id, authorName}: DadosCard) => {
 

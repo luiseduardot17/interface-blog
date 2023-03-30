@@ -9,7 +9,7 @@ import IUsers from "../../interfaces/IUsers"
 import { format } from 'date-fns';
 
 type URL = string;
-const IMAGES_PATH: URL = '/src/assets/images/'
+const IMAGES_PATH: URL = '/images/'
 
 const PagePost = () => {
   const parametro = useParams()
