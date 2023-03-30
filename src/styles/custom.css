@@ -168,6 +168,10 @@
         --bs-pagination-font-size: 1rem;
         --bs-pagination-border-radius: 0.5rem;
     }
+
+    .p-5 {
+        padding: 0.5rem!important;
+    }
 }
 
 @media screen and (max-width: 375px) {
