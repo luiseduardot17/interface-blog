@@ -52,6 +52,7 @@ const PagePost = () => {
       setDate(formattedDate);
       calculateReadingTime();
     }
+    window.scrollTo(0, 0);
   }, [parametro])
 
   function getRandomDate(startDate: Date, endDate: Date): Date {
