@@ -37,7 +37,8 @@ const Home = () => {
   }
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchText(event.target.value);
+    const searchText = event.target.value.toLowerCase();
+    setSearchText(searchText);
   };
 
   const filteredPosts = posts.filter(post => post.title.includes(searchText));
