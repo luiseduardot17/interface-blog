@@ -161,6 +161,13 @@
     .bold-700-title {
         font-size: 36px;
     }
+
+    .pagination {
+        --bs-pagination-padding-x: 0.85rem;
+        --bs-pagination-padding-y: 0.50rem;
+        --bs-pagination-font-size: 1rem;
+        --bs-pagination-border-radius: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -170,5 +177,9 @@
 
     .bold-700-title {
         font-size: 20px;
+    }
+
+    .pagination {
+        --bs-pagination-padding-x: 0.6rem;
     }
 }
